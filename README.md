@@ -1,8 +1,8 @@
-# Fundamentals of IoT — Laboratory Portfolio
+# Fundamentals of IoT + Lab
 
 <p align="center">
   <b>Registration Number: 25011102079</b><br>
-  <b>Course: Fundamentals and Practice of IoT</b><br>
+  <b>Course: Fundamentals of IoT + Lab</b><br>
   <a href="https://github.com/Rathi1233/25011102079_FIoT_LAB">GitHub Repository</a>
 </p>
 
