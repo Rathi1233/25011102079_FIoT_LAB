@@ -1,4 +1,4 @@
-# Fundamentals and Practice of IoT — Laboratory Portfolio
+# Fundamentals of IoT — Laboratory Portfolio
 
 <p align="center">
   <b>Registration Number: 25011102079</b><br>
@@ -10,7 +10,7 @@
 
 ## About This Repository
 
-This repository contains the laboratory experiments and integrated IoT project completed as part of the **Fundamentals and Practice of IoT** course.
+This repository contains the laboratory experiments and integrated IoT project completed as part of the **Fundamentals of IoT + Lab** course.
 
 The experiments demonstrate the progression from fundamental 8051 microcontroller programming to STM32-based embedded systems, peripheral interfacing, wireless communication, sensor integration and IoT application development.
 
