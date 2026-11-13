@@ -774,7 +774,7 @@ This demonstrates that a high Heat Index does not automatically result in a HIGH
 ## Author
 
 **Registration Number:** 25011102079  
-**Course:** Fundamentals and Practice of IoT  
+**Course:** Fundamentals of IoT + Lab  
 **GitHub Profile:** [Rathi1233](https://github.com/Rathi1233)  
 **Repository:** [25011102079_FIoT_LAB](https://github.com/Rathi1233/25011102079_FIoT_LAB)
 
