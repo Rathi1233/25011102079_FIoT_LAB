@@ -1,0 +1,129 @@
+[
+  {
+    "id": "cat13_tab",
+    "type": "tab",
+    "label": "CAT13 BME280 MQTT",
+    "disabled": false,
+    "info": "BME280 JSON telemetry from STM32 via ESP8266."
+  },
+  {
+    "id": "cat13_broker",
+    "type": "mqtt-broker",
+    "name": "EMQX Public Broker",
+    "broker": "broker.emqx.io",
+    "port": "1883",
+    "clientid": "node-red-cat13-bme280",
+    "autoConnect": true,
+    "usetls": false,
+    "protocolVersion": "4",
+    "keepalive": "60",
+    "cleansession": true,
+    "autoUnsubscribe": true,
+    "birthTopic": "",
+    "birthQos": "0",
+    "birthPayload": "",
+    "birthMsg": {},
+    "closeTopic": "",
+    "closeQos": "0",
+    "closePayload": "",
+    "closeMsg": {},
+    "willTopic": "",
+    "willQos": "0",
+    "willPayload": "",
+    "willMsg": {},
+    "userProps": "",
+    "sessionExpiry": ""
+  },
+  {
+    "id": "cat13_mqttin",
+    "type": "mqtt in",
+    "z": "cat13_tab",
+    "name": "BME280 telemetry",
+    "topic": "stm32/bme280",
+    "qos": "0",
+    "datatype": "auto-detect",
+    "broker": "cat13_broker",
+    "nl": false,
+    "rap": true,
+    "rh": 0,
+    "inputs": 0,
+    "x": 180,
+    "y": 140,
+    "wires": [
+      [
+        "cat13_json"
+      ]
+    ]
+  },
+  {
+    "id": "cat13_json",
+    "type": "json",
+    "z": "cat13_tab",
+    "name": "Parse JSON payload",
+    "property": "payload",
+    "action": "",
+    "pretty": false,
+    "x": 400,
+    "y": 140,
+    "wires": [
+      [
+        "cat13_fields",
+        "cat13_raw_debug"
+      ]
+    ]
+  },
+  {
+    "id": "cat13_fields",
+    "type": "function",
+    "z": "cat13_tab",
+    "name": "Extract temperature, humidity, pressure",
+    "func": "const p = msg.payload;\nif (!p || p.status !== \"success\" || p.temperature === undefined || p.humidity === undefined || p.pressure === undefined) {\n    node.warn(\"Invalid BME280 JSON payload\");\n    return null;\n}\nmsg.payload = {\n    temperature: Number(p.temperature),\n    humidity: Number(p.humidity),\n    pressure: Number(p.pressure)\n};\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 710,
+    "y": 140,
+    "wires": [
+      [
+        "cat13_debug"
+      ]
+    ]
+  },
+  {
+    "id": "cat13_debug",
+    "type": "debug",
+    "z": "cat13_tab",
+    "name": "BME280 values for dashboard",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1010,
+    "y": 140,
+    "wires": []
+  },
+  {
+    "id": "cat13_raw_debug",
+    "type": "debug",
+    "z": "cat13_tab",
+    "name": "Raw JSON message",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 680,
+    "y": 230,
+    "wires": []
+  }
+]

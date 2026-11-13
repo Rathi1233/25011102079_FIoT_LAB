@@ -1,0 +1,125 @@
+[
+    {
+        "id": "09a021ab28e5ee8c",
+        "type": "ui-text",
+        "z": "bf5662d9288ed5b4",
+        "group": "6d544629a5e2e48d",
+        "order": 2,
+        "width": "6",
+        "height": "2",
+        "name": "Heat Index Advisory",
+        "label": "Heat Index Advisory",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Times New Roman,Times,serif",
+        "fontSize": "16",
+        "color": "#717171",
+        "wrapText": true,
+        "className": "",
+        "value": "payload.heat_index_advisory",
+        "valueType": "msg",
+        "x": 1380,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "6d544629a5e2e48d",
+        "type": "ui-group",
+        "name": "Heat Risk & Safety",
+        "page": "e9aff64422536b51",
+        "width": 6,
+        "height": 1,
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default",
+        "tab": ""
+    },
+    {
+        "id": "e9aff64422536b51",
+        "type": "ui-page",
+        "name": "Heat Monitoring and Irrigation Advisory",
+        "ui": "c342692a39ae370a",
+        "path": "/heat-monitoring",
+        "icon": "thermometer-alert",
+        "layout": "grid",
+        "theme": "c96101668f1215ae",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "tabs": [],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "c342692a39ae370a",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "c96101668f1215ae",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#fcfcfd",
+            "primary": "#0d74ce",
+            "bgPage": "#f9f9fb",
+            "groupBg": "#ffffff",
+            "groupOutline": "#d9d9e0"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "597a3fa40cad5690",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard": "1.33.0"
+        }
+    }
+]

@@ -1,0 +1,1469 @@
+[
+    {
+        "id": "d0e7f180e6e57d85",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e684de174ad6fda1",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "dbb9e8881cbf254a",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "bf5662d9288ed5b4",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c342692a39ae370a",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "c96101668f1215ae",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#fcfcfd",
+            "primary": "#0d74ce",
+            "bgPage": "#f9f9fb",
+            "groupBg": "#ffffff",
+            "groupOutline": "#d9d9e0"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "e9aff64422536b51",
+        "type": "ui-page",
+        "name": "Rice Crop Monitoring",
+        "ui": "c342692a39ae370a",
+        "path": "/heat-monitoring",
+        "icon": "thermometer-alert",
+        "layout": "grid",
+        "theme": "c96101668f1215ae",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "tabs": [],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "0a1ae61f932af42a",
+        "type": "ui-group",
+        "name": "City Weather Data",
+        "page": "e9aff64422536b51",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default",
+        "tab": ""
+    },
+    {
+        "id": "bcb23f146c7c93c2",
+        "type": "mqtt-broker",
+        "name": "stm32/Rathi",
+        "broker": "broker.emqx.io",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "f27a0bb93f7c3e25",
+        "type": "mqtt-broker",
+        "name": "Rathi",
+        "broker": "broker.emqx.io",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "3f62b69b4a2f046a",
+        "type": "mqtt-broker",
+        "name": "Farmer",
+        "broker": "broker.emqx.io",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "aa2e33365110e365",
+        "type": "ui-group",
+        "name": "STM32 – Current Local Data",
+        "page": "e9aff64422536b51",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default",
+        "tab": ""
+    },
+    {
+        "id": "6d544629a5e2e48d",
+        "type": "ui-group",
+        "name": "Heat Risk & Safety",
+        "page": "e9aff64422536b51",
+        "width": 6,
+        "height": 1,
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default",
+        "tab": ""
+    },
+    {
+        "id": "7bd89098515f86ac",
+        "type": "ui-group",
+        "name": "Comparison Analysis",
+        "page": "e9aff64422536b51",
+        "width": 6,
+        "height": 1,
+        "order": 4,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default",
+        "tab": ""
+    },
+    {
+        "id": "532807cfae7a1bc9",
+        "type": "inject",
+        "z": "e684de174ad6fda1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 320,
+        "wires": [
+            [
+                "0ebf8d5add9c2ecf"
+            ]
+        ]
+    },
+    {
+        "id": "0ebf8d5add9c2ecf",
+        "type": "http request",
+        "z": "e684de174ad6fda1",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://192.168.1.38/",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 450,
+        "y": 280,
+        "wires": [
+            [
+                "4bbe5b48a907f182"
+            ]
+        ]
+    },
+    {
+        "id": "4bbe5b48a907f182",
+        "type": "debug",
+        "z": "e684de174ad6fda1",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "0fcb631c00c426ca",
+        "type": "debug",
+        "z": "dbb9e8881cbf254a",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "313c9c6a3fdb77a9",
+        "type": "mqtt in",
+        "z": "dbb9e8881cbf254a",
+        "name": "",
+        "topic": "stm32/Rathi",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "f27a0bb93f7c3e25",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 450,
+        "y": 260,
+        "wires": [
+            [
+                "0fcb631c00c426ca"
+            ]
+        ]
+    },
+    {
+        "id": "f6cb25d0a4182d8e",
+        "type": "mqtt in",
+        "z": "dbb9e8881cbf254a",
+        "name": "",
+        "topic": "farm/field01/telemetry",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3f62b69b4a2f046a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 280,
+        "y": 500,
+        "wires": [
+            [
+                "4defbdbd940819e1"
+            ]
+        ]
+    },
+    {
+        "id": "4defbdbd940819e1",
+        "type": "json",
+        "z": "dbb9e8881cbf254a",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 420,
+        "y": 520,
+        "wires": [
+            [
+                "6d83f10daf9e54e9"
+            ]
+        ]
+    },
+    {
+        "id": "5f26841a96b85bc8",
+        "type": "debug",
+        "z": "dbb9e8881cbf254a",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "ce7c9d87c8c49cca",
+        "type": "function",
+        "z": "dbb9e8881cbf254a",
+        "name": "function 9",
+        "func": "// Save the latest weather API reading\nflow.set(\"weatherData\", msg.payload);\n\n// Identify the data source\nmsg.source = \"weather_api\";\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 440,
+        "wires": [
+            [
+                "b35c35bc8ef26123"
+            ]
+        ]
+    },
+    {
+        "id": "6d83f10daf9e54e9",
+        "type": "function",
+        "z": "dbb9e8881cbf254a",
+        "name": "function 10",
+        "func": "// Receive BME280 MQTT data\nlet sensor = msg.payload;\n\n// Standardize sensor values\nlet sensorData = {\n    temperature: Number(sensor.temperature_c),\n    humidity: Number(sensor.humidity_pct),\n    pressure: Number(sensor.pressure_hpa),\n    timestamp: Date.now()\n};\n\n// Store latest sensor reading\nflow.set(\"sensorData\", sensorData);\n\nmsg.source = \"bme280\";\nmsg.payload = sensorData;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 500,
+        "wires": [
+            [
+                "b35c35bc8ef26123"
+            ]
+        ]
+    },
+    {
+        "id": "b35c35bc8ef26123",
+        "type": "function",
+        "z": "dbb9e8881cbf254a",
+        "name": "function 11",
+        "func": "let sensor = flow.get(\"sensorData\");\nlet weather = flow.get(\"weatherData\");\n\n// Wait until both sources have provided data\nif (!sensor || !weather) {\n    node.warn(\"Waiting for sensor and weather data\");\n    return null;\n}\n\nlet result = {\n    sensor_temperature: sensor.temperature,\n    weather_temperature: weather.temperature,\n\n    sensor_humidity: sensor.humidity,\n    weather_humidity: weather.humidity,\n\n    sensor_pressure: sensor.pressure,\n    weather_pressure: weather.pressure,\n\n    temperature_difference:\n        Number((sensor.temperature - weather.temperature).toFixed(2)),\n\n    humidity_difference:\n        Number((sensor.humidity - weather.humidity).toFixed(2)),\n\n    pressure_difference:\n        Number((sensor.pressure - weather.pressure).toFixed(2))\n};\n\nmsg.payload = result;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 560,
+        "wires": [
+            [
+                "5f26841a96b85bc8"
+            ]
+        ]
+    },
+    {
+        "id": "11fb46efb2ebe955",
+        "type": "inject",
+        "z": "bf5662d9288ed5b4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "30",
+        "topic": "chennai_weather",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 460,
+        "wires": [
+            [
+                "636a10cf110bf119"
+            ]
+        ]
+    },
+    {
+        "id": "636a10cf110bf119",
+        "type": "http request",
+        "z": "bf5662d9288ed5b4",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.openweathermap.org/data/2.5/weather?q=Chennai&appid=0437580dcba187930be7f8b86e1d2111&units=metric",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 250,
+        "y": 360,
+        "wires": [
+            [
+                "9ff5e5f39f53ee6d"
+            ]
+        ]
+    },
+    {
+        "id": "9ff5e5f39f53ee6d",
+        "type": "json",
+        "z": "bf5662d9288ed5b4",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 410,
+        "y": 400,
+        "wires": [
+            [
+                "dcc655bc54d1d892"
+            ]
+        ]
+    },
+    {
+        "id": "dcc655bc54d1d892",
+        "type": "function",
+        "z": "bf5662d9288ed5b4",
+        "name": "api returning values",
+        "func": "\n/* =====================================\n   WEATHER API DATA EXTRACTION\n   ===================================== */\n\nlet weather = msg.payload;\n\nif (\n    !weather ||\n    !weather.main ||\n    !weather.wind\n) {\n    node.error(\"Invalid weather API response\", msg);\n    return null;\n}\n\nlet result = {\n    city: weather.name || \"Unknown\",\n    temperature: Number(weather.main.temp),\n    feels_like: Number(weather.main.feels_like),\n    humidity: Number(weather.main.humidity),\n    pressure: Number(weather.main.pressure),\n    wind_speed: Number(weather.wind.speed),\n    timestamp: Date.now()\n};\n\nif (\n    ![\n        result.temperature,\n        result.humidity,\n        result.pressure,\n        result.feels_like,\n        result.wind_speed\n    ].every(Number.isFinite) ||\n    result.humidity < 0 ||\n    result.humidity > 100\n) {\n    node.error(\"Invalid weather values\", msg);\n    return null;\n}\n\nmsg.payload = result;\nmsg.source = \"weather_api\";\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 420,
+        "wires": [
+            [
+                "77637bdef33ef52c"
+            ]
+        ]
+    },
+    {
+        "id": "77637bdef33ef52c",
+        "type": "function",
+        "z": "bf5662d9288ed5b4",
+        "name": "calculation of heat index",
+        "func": "\n/* =====================================\n   WEATHER API HEAT INDEX\n   ===================================== */\n\nlet data = msg.payload;\n\nif (\n    !data ||\n    !Number.isFinite(Number(data.temperature)) ||\n    !Number.isFinite(Number(data.humidity)) ||\n    Number(data.humidity) < 0 ||\n    Number(data.humidity) > 100\n) {\n    node.error(\"Invalid weather data for heat index\", msg);\n    return null;\n}\n\nlet T = Number(data.temperature);\nlet RH = Number(data.humidity);\n\nlet F = T * 9/5 + 32;\n\n// Initial heat index estimate\nlet HI = 0.5 * (\n    F + 61 + ((F - 68) * 1.2) + (RH * 0.094)\n);\n\nHI = (HI + F) / 2;\n\n// NOAA Rothfusz regression\nif (HI >= 80) {\n    HI = -42.379\n        + 2.04901523 * F\n        + 10.14333127 * RH\n        - 0.22475541 * F * RH\n        - 0.00683783 * F * F\n        - 0.05481717 * RH * RH\n        + 0.00122874 * F * F * RH\n        + 0.00085282 * F * RH * RH\n        - 0.00000199 * F * F * RH * RH;\n\n    if (RH < 13 && F >= 80 && F <= 112) {\n        HI -= ((13 - RH) / 4) *\n            Math.sqrt((17 - Math.abs(F - 95)) / 17);\n    } else if (RH > 85 && F >= 80 && F <= 87) {\n        HI += ((RH - 85) / 10) *\n            ((87 - F) / 5);\n    }\n}\n\nlet heatIndex = (HI - 32) * 5/9;\n\nlet risk;\n\nif (HI < 80) {\n    risk = \"Normal\";\n} else if (HI < 90) {\n    risk = \"Caution\";\n} else if (HI < 103) {\n    risk = \"Extreme Caution\";\n} else if (HI < 125) {\n    risk = \"Danger\";\n} else {\n    risk = \"Extreme Danger\";\n}\n\ndata.heat_index_c = Number(heatIndex.toFixed(2));\ndata.heat_risk = risk;\n\nmsg.payload = data;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 680,
+        "wires": [
+            [
+                "55658f87ee0f3ddd",
+                "aa987beeb194593a",
+                "c1853a8930e62491",
+                "12e32b8a847fb534",
+                "17d0cab4841aea80"
+            ]
+        ]
+    },
+    {
+        "id": "6e7e64bec89a956f",
+        "type": "function",
+        "z": "bf5662d9288ed5b4",
+        "name": "alerts",
+        "func": "\n/* ============================================\n   HEAT MONITORING\n   & RICE CROP ADVISORY\n   ============================================ */\n\n// 1. GET COMPARISON DATA\n\nlet data = msg.payload;\n\nif (!data || typeof data !== \"object\") {\n    node.warn(\"Invalid comparison data\");\n    return null;\n}\n\n\n// 2. EXTRACT SENSOR READINGS\n\nlet temperature = Number(data.sensor_temperature);\nlet humidity = Number(data.sensor_humidity);\nlet pressure = Number(data.sensor_pressure);\n\nlet heatIndex = Number(data.combined_heat_index_c);\nlet heatRisk = data.combined_heat_risk;\n\n\n// 3. INITIALIZE OUTPUTS\n\nlet alertLevel = \"WAITING\";\n\nlet irrigationAdvisory =\n    \"Waiting for fresh environmental readings.\";\n\nlet heatIndexAdvisory =\n    \"Waiting for valid heat index data.\";\n\nlet temperatureMessage = \"UNAVAILABLE\";\n\n\n// 4. VALIDATE SENSOR READINGS\n\nlet sensorReady =\n    data.sensor_status === \"SENSOR READY\" &&\n    Number.isFinite(temperature) &&\n    Number.isFinite(humidity) &&\n    Number.isFinite(pressure) &&\n    temperature >= -40 && temperature <= 85 &&\n    humidity >= 0 && humidity <= 100 &&\n    pressure >= 300 && pressure <= 1200;\n\n\n// 5. RICE CROP ENVIRONMENTAL ADVISORY\n\nif (!sensorReady) {\n\n    alertLevel = \"WAITING\";\n\n    irrigationAdvisory =\n        \"Waiting for valid BME280 readings. \" +\n        \"Check sensor connectivity and data availability.\";\n\n} else {\n\n    // HIGH: Hot and relatively dry conditions\n\n    if (temperature >= 30 && humidity <= 60) {\n\n        alertLevel = \"HIGH\";\n\n        irrigationAdvisory =\n            \"Potentially increased atmospheric drying detected. \" +\n            \"Rice plants may experience increased water loss. \" +\n            \"Check leaf condition and field water availability. \" +\n            \"Review irrigation requirements promptly.\";\n\n    }\n\n    // MODERATE: Warm conditions with relatively lower humidity\n\n    else if (temperature >= 28 && humidity <= 70) {\n\n        alertLevel = \"MODERATE\";\n\n        irrigationAdvisory =\n            \"Warm conditions detected. Rice crop water demand \" +\n            \"may increase. Monitor crop growth, leaf condition \" +\n            \"and field water availability. Review the irrigation schedule.\";\n\n    }\n\n    // MONITOR: One environmental condition needs attention\n\n    else if (temperature >= 30 || humidity <= 45) {\n\n        alertLevel = \"MONITOR\";\n\n        irrigationAdvisory =\n            \"Environmental conditions need attention. \" +\n            \"Observe rice leaves for wilting or drying and \" +\n            \"check field water availability.\";\n\n    }\n\n    // NORMAL: No elevated signal from current thresholds\n\n    else {\n\n        alertLevel = \"NORMAL\";\n\n        irrigationAdvisory =\n            \"No elevated atmospheric drying signal detected \" +\n            \"by the current thresholds. Continue routine rice \" +\n            \"crop observation and planned irrigation practices.\";\n    }\n}\n\n\n// 6. TEMPERATURE CONDITION\n\nif (Number.isFinite(temperature)) {\n\n    if (temperature < 10) {\n        temperatureMessage = \"VERY COLD\";\n\n    } else if (temperature < 18) {\n        temperatureMessage = \"COLD\";\n\n    } else if (temperature < 25) {\n        temperatureMessage = \"COOL\";\n\n    } else if (temperature < 35) {\n        temperatureMessage = \"WARM\";\n\n    } else {\n        temperatureMessage = \"HOT\";\n    }\n}\n\n\n// 7. NOAA HEAT INDEX ADVISORY\n\nif (\n    Number.isFinite(heatIndex) &&\n    typeof heatRisk === \"string\"\n) {\n\n    if (heatRisk === \"Normal\") {\n\n        heatIndexAdvisory =\n            \"Feels-like heat is below the NOAA caution level. \" +\n            \"Continue normal heat-safety precautions.\";\n\n    } else if (heatRisk === \"Caution\") {\n\n        heatIndexAdvisory =\n            \"It may feel hot due to temperature and humidity. \" +\n            \"Stay hydrated and take breaks during outdoor work.\";\n\n    } else if (heatRisk === \"Extreme Caution\") {\n\n        heatIndexAdvisory =\n            \"It may feel very hot. Reduce prolonged outdoor activity, \" +\n            \"take frequent breaks and stay hydrated.\";\n\n    } else if (heatRisk === \"Danger\") {\n\n        heatIndexAdvisory =\n            \"Dangerously hot conditions are possible. Avoid strenuous \" +\n            \"outdoor work and stay in a cool place.\";\n\n    } else if (heatRisk === \"Extreme Danger\") {\n\n        heatIndexAdvisory =\n            \"Extremely dangerous heat conditions are possible. \" +\n            \"Avoid outdoor exposure and stay in a cool place. \" +\n            \"Follow local heat-safety guidance.\";\n\n    } else {\n\n        heatIndexAdvisory =\n            \"Heat-risk classification is unavailable. Check the data.\";\n    }\n\n} else {\n\n    heatIndexAdvisory =\n        \"Heat index is unavailable. Waiting for valid sensor \" +\n        \"and weather data.\";\n}\n\n\n// 8. ATTACH RESULTS\n\ndata.irrigation_alert_level = alertLevel;\n\ndata.irrigation_advisory = irrigationAdvisory;\n\ndata.temperature_message = temperatureMessage;\n\ndata.heat_index_advisory = heatIndexAdvisory;\n\ndata.environmental_monitoring_status =\n    sensorReady ? \"SENSOR DATA VALID\" : \"SENSOR DATA UNAVAILABLE\";\n\ndata.pressure_monitoring =\n    Number.isFinite(pressure) ? pressure : null;\n\n\n// 9. SEND OUTPUT\n\nmsg.payload = data;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1250,
+        "y": 540,
+        "wires": [
+            [
+                "a630c8d4bff1bec2",
+                "631058fa87c4d04b",
+                "9bb079733c135063",
+                "81e4b7dd648453af",
+                "1edc1d985a6375de",
+                "af3f7b4c4105638d",
+                "5680ee95f0d23b2d",
+                "09a021ab28e5ee8c",
+                "dec5f4046d830f65"
+            ]
+        ]
+    },
+    {
+        "id": "55658f87ee0f3ddd",
+        "type": "ui-gauge",
+        "z": "bf5662d9288ed5b4",
+        "name": "Weather Temperature",
+        "group": "0a1ae61f932af42a",
+        "order": 1,
+        "value": "payload.temperature",
+        "valueType": "msg",
+        "width": "3",
+        "height": "3",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Weather Temperature",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "Celsius",
+        "icon": "",
+        "prefix": "",
+        "suffix": "°C",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "Normal",
+                "textType": "str"
+            },
+            {
+                "from": "30",
+                "color": "#ffc800",
+                "text": "Warm",
+                "textType": "str"
+            },
+            {
+                "from": "35",
+                "color": "#ea5353",
+                "text": "High temperature",
+                "textType": "str"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": "4",
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 860,
+        "y": 680,
+        "wires": [
+            [
+                "90a7dcbda2633a01"
+            ]
+        ]
+    },
+    {
+        "id": "aa987beeb194593a",
+        "type": "ui-gauge",
+        "z": "bf5662d9288ed5b4",
+        "name": "Weather Humidity",
+        "group": "0a1ae61f932af42a",
+        "order": 2,
+        "value": "payload.humidity",
+        "valueType": "msg",
+        "width": "3",
+        "height": "3",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Weather Humidity",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "60",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "80",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 890,
+        "y": 740,
+        "wires": [
+            [
+                "90a7dcbda2633a01"
+            ]
+        ]
+    },
+    {
+        "id": "c1853a8930e62491",
+        "type": "ui-gauge",
+        "z": "bf5662d9288ed5b4",
+        "name": "Heat Index",
+        "group": "0a1ae61f932af42a",
+        "order": 4,
+        "value": "payload.heat_index_c",
+        "valueType": "msg",
+        "width": "3",
+        "height": "3",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Heat Index",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "20",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "27",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "32",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": "20",
+        "max": "60",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 850,
+        "y": 800,
+        "wires": [
+            [
+                "90a7dcbda2633a01"
+            ]
+        ]
+    },
+    {
+        "id": "90a7dcbda2633a01",
+        "type": "debug",
+        "z": "bf5662d9288ed5b4",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "a3d22a4993f93f0a",
+        "type": "mqtt in",
+        "z": "bf5662d9288ed5b4",
+        "name": "",
+        "topic": "stm32/gk",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3f62b69b4a2f046a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 60,
+        "wires": [
+            [
+                "fab183966b0138ff"
+            ]
+        ]
+    },
+    {
+        "id": "17d0cab4841aea80",
+        "type": "function",
+        "z": "bf5662d9288ed5b4",
+        "name": "saving latest api reading",
+        "func": "\n/* =====================================\n   STORE LATEST WEATHER DATA\n   ===================================== */\n\nflow.set(\"weatherData\", msg.payload);\n\nmsg.source = \"weather_api\";\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 560,
+        "wires": [
+            [
+                "e81aea731dcc8ff3"
+            ]
+        ]
+    },
+    {
+        "id": "2add70f8a65fc777",
+        "type": "function",
+        "z": "bf5662d9288ed5b4",
+        "name": "sensor data",
+        "func": "\n/* =====================================\n   BME280 SENSOR DATA PROCESSING\n   ===================================== */\n\nlet sensor = msg.payload;\n\nlet temperature = Number(sensor.temperature_c);\nlet humidity = Number(sensor.humidity_pct);\nlet pressure = Number(sensor.pressure_hpa);\n\n// Validate readings\nif (\n    !Number.isFinite(temperature) ||\n    !Number.isFinite(humidity) ||\n    !Number.isFinite(pressure) ||\n    temperature < -40 || temperature > 85 ||\n    humidity < 0 || humidity > 100 ||\n    pressure < 300 || pressure > 1200\n) {\n    node.warn(\"Invalid BME280 sensor data\");\n    return null;\n}\n\n// Convert Celsius to Fahrenheit\nlet T = temperature * 9/5 + 32;\nlet R = humidity;\n\n// Initial heat index estimate\nlet HI = 0.5 * (\n    T + 61 + ((T - 68) * 1.2) + (R * 0.094)\n);\n\nHI = (HI + T) / 2;\n\n// NOAA Rothfusz regression\nif (HI >= 80) {\n    HI = -42.379\n        + 2.04901523 * T\n        + 10.14333127 * R\n        - 0.22475541 * T * R\n        - 0.00683783 * T * T\n        - 0.05481717 * R * R\n        + 0.00122874 * T * T * R\n        + 0.00085282 * T * R * R\n        - 0.00000199 * T * T * R * R;\n\n    // Low humidity adjustment\n    if (R < 13 && T >= 80 && T <= 112) {\n        HI -= ((13 - R) / 4) *\n            Math.sqrt((17 - Math.abs(T - 95)) / 17);\n    }\n\n    // High humidity adjustment\n    else if (R > 85 && T >= 80 && T <= 87) {\n        HI += ((R - 85) / 10) *\n            ((87 - T) / 5);\n    }\n}\n\n// Fahrenheit to Celsius\nlet heatIndexC = (HI - 32) * 5/9;\n\n// Heat risk classification\nlet risk;\n\nif (HI < 80) {\n    risk = \"Normal\";\n} else if (HI < 90) {\n    risk = \"Caution\";\n} else if (HI < 103) {\n    risk = \"Extreme Caution\";\n} else if (HI < 125) {\n    risk = \"Danger\";\n} else {\n    risk = \"Extreme Danger\";\n}\n\n// Standardized sensor data\nlet sensorData = {\n    temperature: temperature,\n    humidity: humidity,\n    pressure: pressure,\n    heat_index_c: Number(heatIndexC.toFixed(2)),\n    heat_risk: risk,\n    timestamp: Date.now()\n};\n\n// Store latest sensor reading\nflow.set(\"sensorData\", sensorData);\n\nmsg.source = \"bme280\";\nmsg.payload = sensorData;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 140,
+        "wires": [
+            [
+                "e758cb7816871d8e",
+                "a05ba512c8f99192",
+                "980bc76562a2fe5a",
+                "c0bc4d61ed00e369",
+                "e81aea731dcc8ff3"
+            ]
+        ]
+    },
+    {
+        "id": "e81aea731dcc8ff3",
+        "type": "function",
+        "z": "bf5662d9288ed5b4",
+        "name": "comparision",
+        "func": "\n/* ============================================\n   COMPARISON ENGINE\n   STM32 BME280 vs WEATHER API\n   ============================================ */\n\n// 1. GET LATEST DATA\n\nlet sensor = flow.get(\"sensorData\");\nlet weather = flow.get(\"weatherData\");\n\nlet now = Date.now();\n\n// Data update interval: 60 seconds\n// Maximum allowed data age: 120 seconds\nconst MAX_AGE = 120 * 1000;\n\n\n// 2. INITIALIZE RESULT\n\nlet result = {\n    comparison_status: \"WAITING\",\n    sensor_status: \"WAITING\",\n    weather_status: \"WAITING\"\n};\n\n\n// 3. VALIDATE SENSOR DATA\n\nif (!sensor) {\n    result.sensor_status = \"NO SENSOR DATA\";\n\n} else if (\n    !Number.isFinite(sensor.timestamp) ||\n    now - sensor.timestamp > MAX_AGE ||\n    now - sensor.timestamp < 0\n) {\n    result.sensor_status = \"SENSOR DATA STALE\";\n\n} else {\n    result.sensor_status = \"SENSOR READY\";\n}\n\n\n// 4. VALIDATE WEATHER API DATA\n\nif (!weather) {\n    result.weather_status = \"NO WEATHER DATA\";\n\n} else if (\n    !Number.isFinite(weather.timestamp) ||\n    now - weather.timestamp > MAX_AGE ||\n    now - weather.timestamp < 0\n) {\n    result.weather_status = \"WEATHER DATA STALE\";\n\n} else {\n    result.weather_status = \"WEATHER READY\";\n}\n\n\n// 5. CHECK BOTH DATA SOURCES\n\nif (\n    result.sensor_status !== \"SENSOR READY\" ||\n    result.weather_status !== \"WEATHER READY\"\n) {\n    result.comparison_status = \"DATA UNAVAILABLE\";\n    msg.payload = result;\n    return msg;\n}\n\n\n// 6. EXTRACT SENSOR VALUES\n\nlet st = Number(sensor.temperature);\nlet sh = Number(sensor.humidity);\nlet sp = Number(sensor.pressure);\nlet shi = Number(sensor.heat_index_c);\n\n\n// 7. EXTRACT WEATHER API VALUES\n\nlet wt = Number(weather.temperature);\nlet wh = Number(weather.humidity);\nlet wp = Number(weather.pressure);\nlet whi = Number(weather.heat_index_c);\n\n\n// 8. VALIDATE ALL READINGS\n\nif (\n    ![st, sh, sp, shi, wt, wh, wp, whi].every(Number.isFinite) ||\n    sh < 0 || sh > 100 ||\n    wh < 0 || wh > 100\n) {\n    result.comparison_status = \"INVALID DATA\";\n    msg.payload = result;\n    return msg;\n}\n\n\n// 9. CALCULATE DIFFERENCES\n\nlet td = st - wt;\nlet hd = sh - wh;\nlet pd = sp - wp;\nlet hid = shi - whi;\n\n\n// 10. IDENTIFY HIGHER HEAT INDEX SOURCE\n\nlet hotterSource = \"EQUAL\";\n\nif (shi > whi) {\n    hotterSource = \"STM32 SENSOR\";\n\n} else if (whi > shi) {\n    hotterSource = \"WEATHER API\";\n}\n\n\n// 11. SELECT HIGHER HEAT INDEX\n\n// Conservative screening approach\nlet combinedHI = Math.max(shi, whi);\n\n// Convert Celsius to Fahrenheit\nlet hiF = combinedHI * 9/5 + 32;\n\n\n// 12. CLASSIFY NOAA HEAT RISK\n\nlet combinedRisk;\n\nif (hiF < 80) {\n    combinedRisk = \"Normal\";\n\n} else if (hiF < 90) {\n    combinedRisk = \"Caution\";\n\n} else if (hiF < 103) {\n    combinedRisk = \"Extreme Caution\";\n\n} else if (hiF < 125) {\n    combinedRisk = \"Danger\";\n\n} else {\n    combinedRisk = \"Extreme Danger\";\n}\n\n\n// 13. TEMPERATURE CONDITION MESSAGE\n\n// Based on local STM32 sensor temperature\n\nlet temperatureMessage;\n\nif (st < 10) {\n    temperatureMessage = \"VERY COLD\";\n\n} else if (st < 18) {\n    temperatureMessage = \"COLD\";\n\n} else if (st < 25) {\n    temperatureMessage = \"COOL\";\n\n} else if (st < 35) {\n    temperatureMessage = \"WARM\";\n\n} else {\n    temperatureMessage = \"HOT\";\n}\n\n\n// 14. PREPARE FINAL OUTPUT\n\nresult = {\n\n    // Data status\n    comparison_status: \"READY\",\n    sensor_status: \"SENSOR READY\",\n    weather_status: \"WEATHER READY\",\n\n    // Temperature\n    sensor_temperature: st,\n    weather_temperature: wt,\n    temperature_difference: Number(td.toFixed(2)),\n\n    // Humidity\n    sensor_humidity: sh,\n    weather_humidity: wh,\n    humidity_difference: Number(hd.toFixed(2)),\n\n    // Pressure\n    sensor_pressure: sp,\n    weather_pressure: wp,\n    pressure_difference: Number(pd.toFixed(2)),\n\n    // Heat Index\n    sensor_heat_index: shi,\n    weather_heat_index: whi,\n    heat_index_difference: Number(hid.toFixed(2)),\n\n    // Higher heat index source\n    hotter_source: hotterSource,\n\n    // Combined heat screening\n    combined_heat_index_c: Number(combinedHI.toFixed(2)),\n    combined_heat_risk: combinedRisk,\n\n    // Local temperature condition\n    temperature_message: temperatureMessage,\n\n    // Last comparison time\n    timestamp: now\n};\n\n\n// 15. SEND OUTPUT\n\nmsg.payload = result;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 320,
+        "wires": [
+            [
+                "6e7e64bec89a956f"
+            ]
+        ]
+    },
+    {
+        "id": "980bc76562a2fe5a",
+        "type": "ui-gauge",
+        "z": "bf5662d9288ed5b4",
+        "name": "Weather Temperature",
+        "group": "aa2e33365110e365",
+        "order": 1,
+        "value": "payload.temperature",
+        "valueType": "msg",
+        "width": "3",
+        "height": "3",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Weather Temperature",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "Celsius",
+        "icon": "",
+        "prefix": "",
+        "suffix": "°C",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "Normal",
+                "textType": "str"
+            },
+            {
+                "from": "30",
+                "color": "#ffc800",
+                "text": "Warm",
+                "textType": "str"
+            },
+            {
+                "from": "35",
+                "color": "#ea5353",
+                "text": "High temperature",
+                "textType": "str"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": "4",
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 800,
+        "y": 40,
+        "wires": [
+            [
+                "a383a30ebd6c8e8e"
+            ]
+        ]
+    },
+    {
+        "id": "c0bc4d61ed00e369",
+        "type": "ui-gauge",
+        "z": "bf5662d9288ed5b4",
+        "name": "Weather Humidity",
+        "group": "aa2e33365110e365",
+        "order": 2,
+        "value": "payload.humidity",
+        "valueType": "msg",
+        "width": "3",
+        "height": "3",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Weather Humidity",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "60",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "80",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 810,
+        "y": 100,
+        "wires": [
+            [
+                "a383a30ebd6c8e8e"
+            ]
+        ]
+    },
+    {
+        "id": "a05ba512c8f99192",
+        "type": "ui-gauge",
+        "z": "bf5662d9288ed5b4",
+        "name": "Heat Index",
+        "group": "aa2e33365110e365",
+        "order": 4,
+        "value": "payload.heat_index_c",
+        "valueType": "msg",
+        "width": "3",
+        "height": "3",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Heat Index",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "20",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "27",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "32",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": "20",
+        "max": "60",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 810,
+        "y": 140,
+        "wires": [
+            [
+                "a383a30ebd6c8e8e"
+            ]
+        ]
+    },
+    {
+        "id": "a383a30ebd6c8e8e",
+        "type": "debug",
+        "z": "bf5662d9288ed5b4",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "e758cb7816871d8e",
+        "type": "ui-gauge",
+        "z": "bf5662d9288ed5b4",
+        "name": "Sensor Pressure",
+        "group": "aa2e33365110e365",
+        "order": 3,
+        "value": "payload.pressure",
+        "valueType": "msg",
+        "width": "3",
+        "height": "3",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Sensor Pressure",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "hPa",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": "300",
+        "max": "1200",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 810,
+        "y": 200,
+        "wires": [
+            [
+                "a383a30ebd6c8e8e"
+            ]
+        ]
+    },
+    {
+        "id": "4bb23bf7e50473f2",
+        "type": "inject",
+        "z": "bf5662d9288ed5b4",
+        "name": "Simulated STM32 Data",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "30",
+        "topic": "",
+        "payload": "{   \"temperature_c\": 33.5,   \"humidity_pct\": 75,   \"pressure_hpa\": 1008 }",
+        "payloadType": "json",
+        "x": 170,
+        "y": 160,
+        "wires": [
+            [
+                "06ec9dcf864cab6b"
+            ]
+        ]
+    },
+    {
+        "id": "12e32b8a847fb534",
+        "type": "ui-gauge",
+        "z": "bf5662d9288ed5b4",
+        "name": "Sensor Pressure",
+        "group": "0a1ae61f932af42a",
+        "order": 3,
+        "value": "payload.pressure",
+        "valueType": "msg",
+        "width": "3",
+        "height": "3",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Sensor Pressure",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "hPa",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": "300",
+        "max": "1200",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 850,
+        "y": 880,
+        "wires": [
+            [
+                "90a7dcbda2633a01"
+            ]
+        ]
+    },
+    {
+        "id": "a630c8d4bff1bec2",
+        "type": "debug",
+        "z": "bf5662d9288ed5b4",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1420,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "631058fa87c4d04b",
+        "type": "ui-text",
+        "z": "bf5662d9288ed5b4",
+        "group": "6d544629a5e2e48d",
+        "order": 3,
+        "width": "6",
+        "height": "1",
+        "name": "Crop Environmental Alert Level",
+        "label": "Crop Environmental Alert Level",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Arial Narrow,Nimbus Sans L,sans-serif",
+        "fontSize": "18",
+        "color": "#717171",
+        "wrapText": true,
+        "className": " ",
+        "value": "payload.irrigation_alert_level",
+        "valueType": "msg",
+        "x": 1630,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "9bb079733c135063",
+        "type": "ui-text",
+        "z": "bf5662d9288ed5b4",
+        "group": "6d544629a5e2e48d",
+        "order": 4,
+        "width": "6",
+        "height": "2",
+        "name": "Rice Plant Suggestion",
+        "label": "Rice Plant Suggestion",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Trebuchet MS,Helvetica,sans-serif",
+        "fontSize": "14",
+        "color": "#717171",
+        "wrapText": true,
+        "className": "",
+        "value": "payload.irrigation_advisory",
+        "valueType": "msg",
+        "x": 1600,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "5680ee95f0d23b2d",
+        "type": "ui-text",
+        "z": "bf5662d9288ed5b4",
+        "group": "7bd89098515f86ac",
+        "order": 1,
+        "width": "6",
+        "height": "1",
+        "name": "Temperature_difference",
+        "label": "Temperature_difference",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Arial Narrow,Nimbus Sans L,sans-serif",
+        "fontSize": "16",
+        "color": "#717171",
+        "wrapText": true,
+        "className": "",
+        "value": "payload.temperature_difference",
+        "valueType": "msg",
+        "x": 1605.281494140625,
+        "y": 727.3062133789062,
+        "wires": []
+    },
+    {
+        "id": "81e4b7dd648453af",
+        "type": "ui-text",
+        "z": "bf5662d9288ed5b4",
+        "group": "7bd89098515f86ac",
+        "order": 2,
+        "width": "6",
+        "height": "1",
+        "name": "Heat_index_difference",
+        "label": "Heat_index_difference",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Arial Narrow,Nimbus Sans L,sans-serif",
+        "fontSize": "16",
+        "color": "#717171",
+        "wrapText": true,
+        "className": "",
+        "value": "payload.heat_index_difference",
+        "valueType": "msg",
+        "x": 1600,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "1edc1d985a6375de",
+        "type": "ui-text",
+        "z": "bf5662d9288ed5b4",
+        "group": "7bd89098515f86ac",
+        "order": 3,
+        "width": "6",
+        "height": "1",
+        "name": "Pressure_difference",
+        "label": "Pressure_difference",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Arial Narrow,Nimbus Sans L,sans-serif",
+        "fontSize": "16",
+        "color": "#717171",
+        "wrapText": true,
+        "className": "",
+        "value": "payload.pressure_difference",
+        "valueType": "msg",
+        "x": 1600,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "af3f7b4c4105638d",
+        "type": "ui-text",
+        "z": "bf5662d9288ed5b4",
+        "group": "7bd89098515f86ac",
+        "order": 4,
+        "width": "6",
+        "height": "1",
+        "name": "Higher Heat Exposure",
+        "label": "Higher Heat Exposure",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Arial Narrow,Nimbus Sans L,sans-serif",
+        "fontSize": "16",
+        "color": "#717171",
+        "wrapText": true,
+        "className": "",
+        "value": "payload.hotter_source",
+        "valueType": "msg",
+        "x": 1600,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "06ec9dcf864cab6b",
+        "type": "function",
+        "z": "bf5662d9288ed5b4",
+        "name": "varying",
+        "func": "\n/* =====================================\n   MOCK BME280 DATA GENERATOR\n   Temperature, Humidity, Pressure\n   ===================================== */\n\nlet p = msg.payload;\n\nif (!p ||\n    !Number.isFinite(Number(p.temperature_c)) ||\n    !Number.isFinite(Number(p.humidity_pct)) ||\n    !Number.isFinite(Number(p.pressure_hpa))) {\n    node.warn(\"Invalid mock BME280 input\");\n    return null;\n}\n\nlet current = flow.get(\"mockBME280\") || {\n    temperature_c: Number(p.temperature_c),\n    humidity_pct: Number(p.humidity_pct),\n    pressure_hpa: Number(p.pressure_hpa)\n};\n\nfunction vary(value, change, min, max) {\n    let next = value + (Math.random() - 0.5) * change;\n    return Number(Math.max(min, Math.min(max, next)).toFixed(2));\n}\n\ncurrent.temperature_c =\n    vary(current.temperature_c, 0.8, 20, 45);\n\ncurrent.humidity_pct =\n    vary(current.humidity_pct, 2, 20, 100);\n\ncurrent.pressure_hpa =\n    vary(current.pressure_hpa, 1.5, 950, 1050);\n\nflow.set(\"mockBME280\", current);\n\nmsg.payload = {\n    temperature_c: current.temperature_c,\n    humidity_pct: current.humidity_pct,\n    pressure_hpa: current.pressure_hpa\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "09a021ab28e5ee8c",
+        "type": "ui-text",
+        "z": "bf5662d9288ed5b4",
+        "group": "6d544629a5e2e48d",
+        "order": 2,
+        "width": "6",
+        "height": "2",
+        "name": "Heat Index Advisory",
+        "label": "Heat Index Advisory",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Times New Roman,Times,serif",
+        "fontSize": "16",
+        "color": "#717171",
+        "wrapText": true,
+        "className": "",
+        "value": "payload.heat_index_advisory",
+        "valueType": "msg",
+        "x": 1380,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "dec5f4046d830f65",
+        "type": "ui-text",
+        "z": "bf5662d9288ed5b4",
+        "group": "6d544629a5e2e48d",
+        "order": 1,
+        "width": "6",
+        "height": "1",
+        "name": "Combined Heat Risk",
+        "label": "Combined Heat Risk",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Times New Roman,Times,serif",
+        "fontSize": "16",
+        "color": "#717171",
+        "wrapText": true,
+        "className": "",
+        "value": "payload.combined_heat_risk",
+        "valueType": "msg",
+        "x": 1380,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "fab183966b0138ff",
+        "type": "function",
+        "z": "bf5662d9288ed5b4",
+        "name": "Parse STM32 Data",
+        "func": "\n\n/* =====================================\n   PARSE STM32 TEXT INTO JSON\n   ===================================== */\n\nlet raw = msg.payload;\n\n// Convert payload to string\nif (typeof raw !== \"string\") {\n    node.warn(\"Expected STM32 text message\");\n    return null;\n}\n\n// Extract temperature, pressure and humidity\nlet match = raw.match(\n    /Temperature:\\s*(-?\\d+(?:\\.\\d+)?)\\s*C\\s*,\\s*Pressure:\\s*(-?\\d+(?:\\.\\d+)?)\\s*hPa\\s*,\\s*Humidity:\\s*(-?\\d+(?:\\.\\d+)?)\\s*%/i\n);\n\nif (!match) {\n    node.warn(\"Invalid STM32 message format: \" + raw);\n    return null;\n}\n\nlet temperature = Number(match[1]);\nlet pressure = Number(match[2]);\nlet humidity = Number(match[3]);\n\n// Validate readings\nif (\n    !Number.isFinite(temperature) ||\n    !Number.isFinite(pressure) ||\n    !Number.isFinite(humidity) ||\n    humidity < 0 || humidity > 100\n) {\n    node.warn(\"Invalid STM32 sensor readings\");\n    return null;\n}\n\n// Create JSON object\nmsg.payload = {\n    temperature_c: temperature,\n    humidity_pct: humidity,\n    pressure_hpa: pressure\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 80,
+        "wires": [
+            [
+                "2add70f8a65fc777"
+            ]
+        ]
+    },
+    {
+        "id": "b9c85ac537dbe608",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard": "1.33.0"
+        }
+    }
+]

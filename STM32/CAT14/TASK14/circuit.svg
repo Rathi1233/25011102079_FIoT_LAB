@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1050" viewBox="0 0 1600 1050">
+<defs><style>
+.title{font:bold 30px Arial;fill:#111}.sub{font:17px Arial;fill:#333}.head{font:bold 20px Arial;fill:#111}
+.txt{font:16px Arial;fill:#111}.small{font:14px Arial;fill:#333}.pin{font:bold 15px Arial;fill:#111}
+.wire{stroke:#111;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.box{fill:#fff;stroke:#111;stroke-width:2.5}.chip{fill:#f5f5f5;stroke:#111;stroke-width:3}
+.res{fill:#fff;stroke:#111;stroke-width:2}.note{fill:#f7f7f7;stroke:#777;stroke-width:1.5}
+</style></defs>
+<rect width="1600" height="1050" fill="white"/>
+<text x="800" y="48" text-anchor="middle" class="title">BME280 SENSOR INTERFACING USING I²C AND MQTT</text>
+<text x="800" y="78" text-anchor="middle" class="sub">STM32F410RBT6 • BME280 • ESP8266 • MQTT Broker</text>
+<line x1="55" y1="105" x2="1545" y2="105" stroke="#111" stroke-width="2"/>
+
+<!-- Supply rail -->
+<text x="800" y="142" text-anchor="middle" class="pin">+3.3 V (regulated)</text>
+<path d="M20 165 H1570" class="wire"/>
+
+<!-- BME280 module -->
+<rect x="60" y="260" width="360" height="350" rx="8" class="box"/>
+<text x="240" y="300" text-anchor="middle" class="head">BME280 SENSOR MODULE</text>
+<rect x="145" y="345" width="190" height="145" rx="8" fill="#e9eef2" stroke="#111" stroke-width="2"/>
+<text x="240" y="395" text-anchor="middle" class="head">BME280</text>
+<text x="240" y="425" text-anchor="middle" class="small">Temperature</text>
+<text x="240" y="450" text-anchor="middle" class="small">Humidity • Pressure</text>
+<!-- sensor pin stubs -->
+<path d="M20 435 H60 M20 500 H60" class="wire"/>
+<text x="72" y="430" class="pin">VCC</text>
+<text x="72" y="495" class="pin">GND</text>
+<path d="M420 405 H485 M420 485 H555" class="wire"/>
+<text x="365" y="395" class="pin">SCL</text>
+<text x="365" y="475" class="pin">SDA</text>
+<text x="240" y="545" text-anchor="middle" class="small">I²C address: 0x76 (SDO LOW)</text>
+<text x="240" y="570" text-anchor="middle" class="small">0x77 (SDO HIGH)</text>
+<text x="240" y="595" text-anchor="middle" class="small">CSB HIGH for I²C mode</text>
+
+<!-- Pull-up resistors -->
+<path d="M485 165 V235" class="wire"/>
+<rect x="472" y="235" width="26" height="48" class="res"/>
+<path d="M485 283 V405" class="wire"/>
+<text x="510" y="263" class="small">R1 4.7 kΩ</text>
+<path d="M555 165 V315" class="wire"/>
+<rect x="542" y="315" width="26" height="48" class="res"/>
+<path d="M555 363 V485" class="wire"/>
+<text x="580" y="343" class="small">R2 4.7 kΩ</text>
+
+<!-- MCU -->
+<rect x="610" y="220" width="390" height="500" rx="10" class="chip"/>
+<text x="805" y="265" text-anchor="middle" class="head">STM32F410RBT6</text>
+<text x="805" y="295" text-anchor="middle" class="txt">Microcontroller / HAL</text>
+<line x1="610" y1="320" x2="1000" y2="320" stroke="#111" stroke-width="2"/>
+<text x="640" y="365" class="pin">PB8 — I2C1_SCL</text>
+<text x="640" y="445" class="pin">PB9 — I2C1_SDA</text>
+<text x="640" y="555" class="pin">PA2 — USART2_TX</text>
+<text x="640" y="625" class="pin">PA3 — USART2_RX</text>
+<text x="805" y="680" text-anchor="middle" class="small">I²C: 100 kHz • UART: 115200, 8-N-1</text>
+
+<!-- I2C wires into MCU -->
+<path d="M485 405 H520 V365 H610" class="wire"/>
+<path d="M555 485 H580 V445 H610" class="wire"/>
+<circle cx="485" cy="405" r="5" fill="#111"/><circle cx="555" cy="485" r="5" fill="#111"/>
+
+<!-- ESP8266 -->
+<rect x="1200" y="300" width="340" height="310" rx="8" class="box"/>
+<text x="1370" y="340" text-anchor="middle" class="head">ESP8266 MODULE</text>
+<rect x="1280" y="375" width="180" height="115" rx="8" fill="#e9eef2" stroke="#111" stroke-width="2"/>
+<text x="1370" y="420" text-anchor="middle" class="head">ESP8266</text>
+<text x="1370" y="450" text-anchor="middle" class="small">AT Firmware</text>
+<path d="M1200 525 H1240 M1200 575 H1240" class="wire"/>
+<text x="1248" y="530" class="pin">RX</text><text x="1248" y="580" class="pin">TX</text>
+<path d="M1540 430 H1570 M1540 500 H1570" class="wire"/>
+<text x="1530" y="425" text-anchor="end" class="pin">VCC / EN</text>
+<text x="1530" y="495" text-anchor="end" class="pin">GND</text>
+<text x="1370" y="645" text-anchor="middle" class="small">Wi-Fi + TCP connection to MQTT broker</text>
+
+<!-- UART cross-connects -->
+<path d="M1000 555 H1090 V525 H1200" class="wire"/>
+<path d="M1200 575 H1145 V625 H1000" class="wire"/>
+<text x="1090" y="510" text-anchor="middle" class="small">STM32 TX → ESP RX</text>
+<text x="1100" y="650" text-anchor="middle" class="small">ESP TX → STM32 RX</text>
+
+<!-- Power and ground -->
+<path d="M20 435 V165 M20 500 V790 M1570 430 V165 M1570 500 V790 M805 720 V790" class="wire"/>
+<path d="M20 790 H1570" class="wire"/>
+<text x="45" y="820" class="pin">GND COMMON</text>
+<text x="800" y="850" text-anchor="middle" class="small">Connect all grounds together. Power ESP8266 from a stable 3.3 V regulator with adequate current capacity.</text>
+<text x="800" y="875" text-anchor="middle" class="small">Use I²C pull-ups only if they are not already fitted on the BME280 breakout board.</text>
+
+<!-- Data flow note -->
+<rect x="330" y="910" width="940" height="105" rx="8" class="note"/>
+<text x="800" y="945" text-anchor="middle" class="head">DATA FLOW</text>
+<text x="800" y="975" text-anchor="middle" class="txt">BME280 → I²C → STM32 (compensation + JSON) → UART → ESP8266</text>
+<text x="800" y="1000" text-anchor="middle" class="txt">→ Wi-Fi → broker.emqx.io:1883 → Node-RED (MQTT-in)</text>
+</svg>

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120">
+<defs><style>
+.title{font:bold 30px Arial,sans-serif;fill:#111}.sub{font:18px Arial,sans-serif;fill:#333}
+.head{font:bold 21px Arial,sans-serif;fill:#111}.txt{font:17px Arial,sans-serif;fill:#111}
+.small{font:14px Arial,sans-serif;fill:#333}.pin{font:bold 16px Arial,sans-serif;fill:#111}
+.wire{fill:none;stroke:#111;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.i2c{stroke:#1769aa}.uart{stroke:#14804a}
+.box{fill:#fff;stroke:#222;stroke-width:2.5}.module{fill:#f6f7f9;stroke:#222;stroke-width:2.5}
+</style></defs>
+<rect width="1600" height="1120" fill="white"/>
+<text x="800" y="48" text-anchor="middle" class="title">BME280 Sensor Interface with STM32 and ESP8266 HTTP</text>
+<text x="800" y="78" text-anchor="middle" class="sub">STM32F410RB • I²C1 sensor interface • USART1 AT-command link • HTTP JSON output</text>
+<line x1="60" y1="100" x2="1540" y2="100" stroke="#777" stroke-width="1.5"/>
+
+<!-- BME280 -->
+<rect x="75" y="220" width="350" height="390" rx="14" class="box"/>
+<text x="250" y="265" text-anchor="middle" class="head">BME280 SENSOR</text>
+<text x="250" y="295" text-anchor="middle" class="sub">I²C breakout module</text>
+<line x1="105" y1="320" x2="395" y2="320" stroke="#aaa"/>
+<text x="125" y="365" class="pin">SCL</text><text x="270" y="365" class="small">I²C clock</text>
+<text x="125" y="420" class="pin">SDA</text><text x="270" y="420" class="small">I²C data</text>
+<text x="125" y="475" class="pin">VCC</text><text x="270" y="475" class="small">3.3 V</text>
+<text x="125" y="530" class="pin">GND</text><text x="270" y="530" class="small">Common ground</text>
+<line x1="105" y1="550" x2="395" y2="550" stroke="#aaa"/>
+<text x="250" y="580" text-anchor="middle" class="small">CSB → 3.3 V • SDO → GND (0x76)</text>
+
+<!-- MCU -->
+<rect x="575" y="190" width="450" height="470" rx="18" class="module"/>
+<text x="800" y="235" text-anchor="middle" class="head">STM32F410RB</text>
+<text x="800" y="265" text-anchor="middle" class="sub">Microcontroller / HAL application</text>
+<line x1="610" y1="285" x2="990" y2="285" stroke="#aaa"/>
+<text x="800" y="325" text-anchor="middle" class="pin">I²C1</text>
+<text x="800" y="355" text-anchor="middle" class="txt">PB6 = SCL</text>
+<text x="800" y="385" text-anchor="middle" class="txt">PB7 = SDA</text>
+<line x1="610" y1="410" x2="990" y2="410" stroke="#aaa"/>
+<text x="800" y="450" text-anchor="middle" class="pin">USART1 – 115200 baud, 8-N-1</text>
+<text x="800" y="480" text-anchor="middle" class="txt">PA9 = TX</text>
+<text x="800" y="510" text-anchor="middle" class="txt">PA10 = RX</text>
+<line x1="610" y1="535" x2="990" y2="535" stroke="#aaa"/>
+<text x="800" y="575" text-anchor="middle" class="txt">Bosch BME280 API + compensation</text>
+<text x="800" y="605" text-anchor="middle" class="txt">Build JSON and serve HTTP response</text>
+<text x="800" y="635" text-anchor="middle" class="small">Pin assignments follow bme.ioc</text>
+
+<!-- ESP -->
+<rect x="1175" y="220" width="350" height="390" rx="14" class="box"/>
+<text x="1350" y="265" text-anchor="middle" class="head">WEMOS D1 MINI</text>
+<text x="1350" y="295" text-anchor="middle" class="sub">ESP8266 Wi-Fi module</text>
+<line x1="1205" y1="320" x2="1495" y2="320" stroke="#aaa"/>
+<text x="1225" y="365" class="pin">RX</text><text x="1360" y="365" class="small">from STM32 PA9</text>
+<text x="1225" y="420" class="pin">TX</text><text x="1360" y="420" class="small">to STM32 PA10</text>
+<text x="1225" y="475" class="pin">3V3</text><text x="1360" y="475" class="small">regulated 3.3 V</text>
+<text x="1225" y="530" class="pin">GND</text><text x="1360" y="530" class="small">common ground</text>
+<line x1="1205" y1="550" x2="1495" y2="550" stroke="#aaa"/>
+<text x="1350" y="580" text-anchor="middle" class="small">HTTP server on TCP port 80</text>
+
+<!-- I2C wires -->
+<path d="M425 355 H500 V325 H575" class="wire i2c"/>
+<path d="M425 410 H525 V385 H575" class="wire i2c"/>
+<text x="475" y="305" class="small" fill="#1769aa">SCL → PB6</text>
+<text x="485" y="435" class="small" fill="#1769aa">SDA → PB7</text>
+
+<!-- UART wires -->
+<path d="M1025 480 H1090 V365 H1175" class="wire uart"/>
+<path d="M1175 420 H1125 V510 H1025" class="wire uart"/>
+<text x="1075" y="345" class="small" fill="#14804a">PA9 TX → ESP RX</text>
+<text x="1070" y="535" class="small" fill="#14804a">ESP TX → PA10 RX</text>
+
+<!-- Power notes -->
+<rect x="75" y="710" width="1450" height="145" rx="12" fill="#fff8f6" stroke="#c0392b" stroke-width="2"/>
+<text x="110" y="750" class="head">POWER AND GROUND</text>
+<text x="110" y="790" class="txt">• BME280: connect VCC to 3.3 V and GND to common ground.</text>
+<text x="110" y="825" class="txt">• ESP8266: regulated 3.3 V supply with adequate peak current; common GND.</text>
+<text x="900" y="790" class="txt">• Do not apply 5 V to ESP8266 RX or 3V3 pin.</text>
+<text x="900" y="825" class="txt">• Use 3.3 V logic levels on both UART signal lines.</text>
+
+<!-- Endpoint -->
+<rect x="240" y="915" width="1120" height="120" rx="12" fill="#f5f8ff" stroke="#34495e" stroke-width="2"/>
+<text x="800" y="960" text-anchor="middle" class="head">Wi-Fi HTTP endpoint: http://&lt;ESP8266_IP&gt;/sensor</text>
+<text x="800" y="997" text-anchor="middle" class="txt">JSON fields: status, temperature (°C), humidity (%RH), pressure (hPa)</text>
+<text x="800" y="1080" text-anchor="middle" class="small">I²C1: PB6/PB7 • USART1: PA9/PA10 • BME280 address: 0x76 when SDO is LOW</text>
+</svg>

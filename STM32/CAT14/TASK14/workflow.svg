@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="430" viewBox="0 0 1500 430">
+<rect width="1500" height="430" fill="white"/>
+<style>
+.t{font:bold 25px Arial;fill:#111}.h{font:bold 18px Arial;fill:#111}.s{font:15px Arial;fill:#222}.b{fill:#f6f6f6;stroke:#111;stroke-width:2}.w{stroke:#111;stroke-width:3;fill:none}
+</style>
+<text x="750" y="45" text-anchor="middle" class="t">CAT13 – SENSOR TO NODE-RED DATA FLOW</text>
+<g>
+<rect x="35" y="125" width="210" height="145" rx="8" class="b"/><text x="140" y="165" text-anchor="middle" class="h">BME280</text><text x="140" y="200" text-anchor="middle" class="s">Temperature</text><text x="140" y="225" text-anchor="middle" class="s">Humidity / Pressure</text>
+<rect x="315" y="125" width="210" height="145" rx="8" class="b"/><text x="420" y="165" text-anchor="middle" class="h">STM32F410</text><text x="420" y="200" text-anchor="middle" class="s">I²C read + compensation</text><text x="420" y="225" text-anchor="middle" class="s">Build JSON payload</text>
+<rect x="595" y="125" width="210" height="145" rx="8" class="b"/><text x="700" y="165" text-anchor="middle" class="h">ESP8266</text><text x="700" y="200" text-anchor="middle" class="s">AT commands</text><text x="700" y="225" text-anchor="middle" class="s">Wi-Fi + TCP</text>
+<rect x="875" y="125" width="210" height="145" rx="8" class="b"/><text x="980" y="165" text-anchor="middle" class="h">MQTT Broker</text><text x="980" y="200" text-anchor="middle" class="s">broker.emqx.io</text><text x="980" y="225" text-anchor="middle" class="s">Topic: stm32/bme280</text>
+<rect x="1155" y="125" width="300" height="145" rx="8" class="b"/><text x="1305" y="165" text-anchor="middle" class="h">Node-RED</text><text x="1305" y="200" text-anchor="middle" class="s">MQTT-in → JSON parse</text><text x="1305" y="225" text-anchor="middle" class="s">Visualize 3 sensor values</text>
+<path d="M245 198 H315 M525 198 H595 M805 198 H875 M1085 198 H1155" class="w"/>
+<text x="280" y="180" text-anchor="middle" class="s">I²C</text><text x="560" y="180" text-anchor="middle" class="s">UART</text><text x="840" y="180" text-anchor="middle" class="s">Wi-Fi</text><text x="1120" y="180" text-anchor="middle" class="s">MQTT</text>
+<text x="750" y="340" text-anchor="middle" class="s">Payload example: {"status":"success","temperature":28.45,"humidity":62.30,"pressure":1008.72}</text>
+<text x="750" y="375" text-anchor="middle" class="s">Publish interval: 1 second • MQTT port: 1883 • QoS: 0</text>
+</g></svg>
