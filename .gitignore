@@ -11,3 +11,14 @@
 Listings/
 Thumbs.db
 .DS_Store
+
+# Keil generated files
+*.axf
+*.hex
+*.htm
+*.map
+*.dep
+*.crf
+
+# Build output folders
+Objects/
