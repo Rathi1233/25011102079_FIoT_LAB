@@ -1,0 +1,13 @@
+*.obj
+*.o
+*.lst
+*.m51
+*.lnp
+*.build_log.htm
+*.uvopt
+*.uvoptx
+*.uvgui.*
+*.uvguix.*
+Listings/
+Thumbs.db
+.DS_Store
