@@ -244,11 +244,11 @@ For actual irrigation decisions, additional information such as soil moisture, c
 
 The dashboard screenshot documents the **Heat Monitoring & Irrigation Advisory** interface, including city weather data, STM32 local readings, heat-risk advisory and comparison analysis.
 
-![Heat Monitoring Dashboard](Documentation/node_red_dashboard.png)
+![Node-RED Dashboard](../Documentation/node_red_dashboard.png)
 
 The Node-RED flow screenshot documents the MQTT sensor input, STM32 data parsing, weather API request and processing, comparison logic, alert processing and dashboard outputs.
 
-![Node-RED Flow](Documentation/nodered_flow.png)
+![Node-RED Flow](../Documentation/nodered_flow.png)
 
 ## 12. Project Folder Structure
 
